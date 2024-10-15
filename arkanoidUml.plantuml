@@ -1,0 +1,53 @@
+@startuml
+class Player{
+void main()
+}
+
+class Position{
+void update()
+x: int
+y: int
+}
+
+
+Player -> Position: has
+class Ball{
+render()
+}
+
+
+class Size{
+x: int
+y: int
+}
+
+class Colour{
+r: int
+g: int
+b: int
+}
+
+
+class Velocity{
+dx: int
+dy: int
+ang: radians
+}
+
+class Image{
+path: Path
+type: PngJPG
+}
+
+Ball --> Size
+note on link : Size is up to 200px #4500
+Ball --> Colour
+Ball --> Position
+Ball --> Velocity
+
+class Score{
+
+render()
+
+}
+@enduml
